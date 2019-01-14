@@ -1,0 +1,116 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: yes
+configure_sudoers: yes
+configure_terminal: yes
+configure_osx: yes
+
+dotfiles_repo: git@bitbucket.org:steverossen/dot-files.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/git/dotfiles
+dotfiles_files:
+  - .vimrc
+#  - .zpreztorc
+
+homebrew_installed_packages:
+  - autoconf
+  - automake
+  - awscli
+  - git
+  - go
+  - gpg
+  - ipcalc
+  - iperf
+  - kubectx
+  - kubernetes-cli
+  - kubernetes-helm
+  - mas
+  - mtr
+  - netcat
+  - nmap
+  - openssl
+  - python
+  - python@2
+  - ssh-copy-id
+  - telnet
+  - tmux
+  - unrar
+  - vault
+  - wget
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred
+  - appcleaner
+  - docker
+  - dropbox
+  - firefox
+  - google-chrome
+  - google-cloud-sdk
+  - istat-menus
+  - iterm2
+  - keybase
+  - licecap
+  - little-snitch
+  - micro-snitch
+  - ngrock
+  - omnidisksweeper
+  - openconnect-gui
+  - opera
+  - path-finder
+  - postman
+  - rambox
+  - sublime-text
+  - spotify
+  - vagrant
+  - vagrant-manager
+  - vault
+  - viscosity
+  - visual-studio-code
+  - vlc
+  - whatsapp
+  - wireshark
+  - zoiper5
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: 
+ - { id: 443987910, name: "1Password" }
+ - { id: 406056744, name: "Evernote" }
+ - { id: 441258766, name: "Magnet" }
+ - { id: 803453959, name: "Slack" }
+ - { id: 1384080005, name: "Tweetbot" }
+ - { id: 494803304, name: "WiFi Explorer" }
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+  # - name: drush
+  #   state: present # present/absent, default: present
+  #   version: "^8.1" # default: N/A
+gem_packages: []
+  # - name: bundler
+  #   state: present # present/absent/latest, default: present
+  #   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+  # - name: webpack
+  #   state: present # present/absent/latest, default: present
+  #   version: "^2.6" # default: N/A
+pip_packages: 
+  # - name: mkdocs
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+ - name: virtualenv
+ - name: virtualenvwrapper
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
